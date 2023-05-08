@@ -7,13 +7,12 @@ import ProjectCard from "../subComponents/ProjectCard";
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectCont = styled.section`
-    /* overflow-x: hidden; */
-    height: 5000px;
+    /* height: 5000px; */
     .project__row {
-        /* height: 5000px; */
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 80px;
     }
 `;
 
@@ -34,12 +33,18 @@ const Projects = () => {
                         scrollTrigger: {
                             trigger: row,
                             start: "top top",
-                            end: "+=5000",
+                            end: "+=500",
                             scrub: 1,
                             pin: row,
                         },
                     });
-                    tl.fromTo(row, { scale: 3 }, { scale: 1 });
+                    tl.fromTo(row, { scale: 3 }, { scale: 1 }).fromTo(
+                        row,
+                        { x: 0 },
+                        {
+                            x: () => -innerWidth,
+                        }
+                    );
                 }, container);
             }
         );
@@ -52,6 +57,10 @@ const Projects = () => {
                 <ProjectCard id={"card-2"} />
                 <ProjectCard id={"card-3"} />
                 <ProjectCard id={"card-4"} />
+                <ProjectCard id={"card-5"} />
+                <ProjectCard id={"card-6"} />
+                <ProjectCard id={"card-7"} />
+                <ProjectCard id={"card-8"} />
             </div>
         </ProjectCont>
     );
