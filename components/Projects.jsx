@@ -8,6 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ProjectCont = styled.section`
     /* height: 5000px; */
+
+    display: flex;
+    height: 100vh;
+
+    .project__container {
+        height: 100%;
+        background-color: teal;
+        width: fit-content;
+        /* width: 100%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .project__row {
         display: flex;
         flex-direction: row;
@@ -22,45 +35,46 @@ const Projects = () => {
     let mm = gsap.matchMedia();
 
     useLayoutEffect(() => {
-        mm.add(
-            { isDesktop: "(min-width: 800px)", isMobile: "(max-width: 500px)" },
-            (context) => {
-                let { isDesktop, isMobile } = context.conditions;
+        const ctx = gsap.context((self) => {
+            const box = self.selector(".project__container");
+            const row = self.selector(".project__row");
+            let rowWidth = row[0].offsetWidth;
 
-                const ctx = gsap.context((self) => {
-                    const row = self.selector(".project__row");
-                    const tl = gsap.timeline({
-                        scrollTrigger: {
-                            trigger: row,
-                            start: "top top",
-                            end: "+=500",
-                            scrub: 1,
-                            pin: row,
-                        },
-                    });
-                    tl.fromTo(row, { scale: 3 }, { scale: 1 }).fromTo(
-                        row,
-                        { x: 0 },
-                        {
-                            x: () => -innerWidth,
-                        }
-                    );
-                }, container);
-            }
-        );
+            gsap.to(box, {
+                xPercent: -100,
+                x: () => innerWidth,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: box,
+                    start: "top top",
+                    end: `+=${rowWidth}`,
+                    scrub: true,
+                    pin: true,
+                    invalidateOnRefresh: true,
+                    // anticipatePin: 1,
+                    markers: true,
+                },
+            });
+        }, container);
+
+        return () => {
+            ctx.revert(); // animation cleanup!!
+        };
     }, []);
 
     return (
         <ProjectCont ref={container}>
-            <div className="project__row">
-                <ProjectCard id={"card-1"} />
-                <ProjectCard id={"card-2"} />
-                <ProjectCard id={"card-3"} />
-                <ProjectCard id={"card-4"} />
-                <ProjectCard id={"card-5"} />
-                <ProjectCard id={"card-6"} />
-                <ProjectCard id={"card-7"} />
-                <ProjectCard id={"card-8"} />
+            <div className="project__container">
+                <div className="project__row">
+                    <ProjectCard id={"card-1"} />
+                    <ProjectCard id={"card-2"} />
+                    <ProjectCard id={"card-3"} />
+                    <ProjectCard id={"card-4"} />
+                    <ProjectCard id={"card-5"} />
+                    <ProjectCard id={"card-6"} />
+                    <ProjectCard id={"card-7"} />
+                    <ProjectCard id={"card-8"} />
+                </div>
             </div>
         </ProjectCont>
     );

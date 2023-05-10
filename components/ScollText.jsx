@@ -123,6 +123,8 @@ const Hero = () => {
                         .to(textCont3, { y: "-30%", opacity: 0 })
                         .to(name1, { opacity: 0 });
                 }, container);
+
+                return () => ctx.revert();
             }
         );
     }, []);

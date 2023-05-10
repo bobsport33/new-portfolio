@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import ScrollText from "../components/ScollText";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import Spacer from "../components/Spacer";
 
 export default function Home() {
     return (
@@ -25,6 +26,7 @@ export default function Home() {
                 <Header />
                 <Hero />
                 <ScrollText />
+                {/* <Spacer /> */}
                 <Projects />
                 <Footer />
             </main>

@@ -22,6 +22,10 @@ export const GlobalStyles = createGlobalStyle`
 
     }
 
+    body {
+        position: relative;
+    }
+
 
     a {
         color: inherit;
