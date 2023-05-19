@@ -26,8 +26,9 @@ export default function Home() {
                 <Header />
                 <Hero />
                 <ScrollText />
-                {/* <Spacer /> */}
-                <Projects />
+                <Projects title="Projects" />
+                {/* <Spacer />
+                <Projects title="Personal Projects" /> */}
                 <Footer />
             </main>
         </>

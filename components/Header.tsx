@@ -102,11 +102,11 @@ const Header = () => {
             </div>
 
             <div className="header__menu">
-                <a href="#" className="header__link">
-                    Link Text
+                <a href="#projects" className="projec">
+                    Projects
                 </a>
                 <a href="#" className="header__link">
-                    Link Text
+                    Personal Projects
                 </a>
                 <a href="#" className="header__link">
                     Link Text

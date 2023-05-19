@@ -17,7 +17,7 @@ const ProjectCard = () => {
                 alt="TEXT"
                 className="project__image"
             />
-            <h3 className="project__title">this is a title</h3>
+            <h4 className="project__title">this is a title</h4>
             <p className="project__description">
                 This is a description based off the image and title above. This
                 will be adjusted for each card.

@@ -3,20 +3,23 @@ import { gsap } from "gsap";
 import styled from "styled-components";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import ProjectCard from "../subComponents/ProjectCard";
+import { colors } from "../styles/variables";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectCont = styled.section`
-    /* height: 5000px; */
-
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+
+    .project__title {
+        color: ${colors.neutral100};
+        text-align: center;
+    }
 
     .project__container {
-        height: 100%;
-        background-color: teal;
+        height: 100vh;
+        /* height: 100%; */
         width: fit-content;
-        /* width: 100%; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -25,14 +28,14 @@ const ProjectCont = styled.section`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 80px;
+        gap: 100px;
+        margin: 0 100px;
     }
 `;
 
-const Projects = () => {
+const Projects = ({ title, id }) => {
     const container = useRef(null);
     gsap.registerPlugin(ScrollTrigger);
-    let mm = gsap.matchMedia();
 
     useLayoutEffect(() => {
         const ctx = gsap.context((self) => {
@@ -51,19 +54,18 @@ const Projects = () => {
                     scrub: true,
                     pin: true,
                     invalidateOnRefresh: true,
-                    // anticipatePin: 1,
-                    markers: true,
                 },
             });
         }, container);
 
         return () => {
-            ctx.revert(); // animation cleanup!!
+            ctx.revert();
         };
     }, []);
 
     return (
-        <ProjectCont ref={container}>
+        <ProjectCont ref={container} id="projects">
+            <h3 className="project__title">{title}</h3>
             <div className="project__container">
                 <div className="project__row">
                     <ProjectCard id={"card-1"} />
@@ -71,9 +73,9 @@ const Projects = () => {
                     <ProjectCard id={"card-3"} />
                     <ProjectCard id={"card-4"} />
                     <ProjectCard id={"card-5"} />
-                    <ProjectCard id={"card-6"} />
+                    {/* <ProjectCard id={"card-6"} />
                     <ProjectCard id={"card-7"} />
-                    <ProjectCard id={"card-8"} />
+                    <ProjectCard id={"card-8"} /> */}
                 </div>
             </div>
         </ProjectCont>
