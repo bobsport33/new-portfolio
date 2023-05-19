@@ -9,7 +9,7 @@ const ProjectCardCont = styled.div`
     color: ${colors.neutral100};
 `;
 
-const ProjectCard = () => {
+const ProjectCard = ({ data }) => {
     return (
         <ProjectCardCont>
             <img
@@ -17,7 +17,7 @@ const ProjectCard = () => {
                 alt="TEXT"
                 className="project__image"
             />
-            <h4 className="project__title">this is a title</h4>
+            <h4 className="project__title">{data.title}</h4>
             <p className="project__description">
                 This is a description based off the image and title above. This
                 will be adjusted for each card.

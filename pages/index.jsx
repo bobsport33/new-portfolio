@@ -1,4 +1,5 @@
 import Head from "next/head";
+import data from "./api/data";
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -6,7 +7,7 @@ import ScrollText from "../components/ScollText";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import Spacer from "../components/Spacer";
-
+import PersonalProjects from "../components/PersonalProjects";
 export default function Home() {
     return (
         <>
@@ -26,9 +27,9 @@ export default function Home() {
                 <Header />
                 <Hero />
                 <ScrollText />
-                <Projects title="Projects" />
-                {/* <Spacer />
-                <Projects title="Personal Projects" /> */}
+                <Projects projects={data.projects} />
+                <Spacer />
+                <PersonalProjects />
                 <Footer />
             </main>
         </>

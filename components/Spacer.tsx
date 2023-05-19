@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const SpacerCont = styled.section`
-    height: 2000px;
+    height: 3500px;
 `;
 
 const Spacer = () => {
