@@ -30,7 +30,7 @@ const HeroCont = styled.section`
     .heading,
     .hero__text {
         color: ${colors.neutral100};
-        font-size: 3.6rem;
+      
         text-align: center;
         width: 100%;
 

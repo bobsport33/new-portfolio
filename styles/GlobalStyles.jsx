@@ -24,22 +24,47 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
         position: relative;
+
+
     }
 
 
-    a {
+    a, p {
         color: inherit;
         text-decoration: none;
+        font-family: 'Judson', serif;
+        font-size: 2.6rem;
+        line-height: 3rem;
+    }
+    h1 {
+        font-family: 'Archivo', sans-serif;  
+        font-size: 3.6rem;
+        line-height: 3.6rem;
+    }
+    h2 {
+        font-family: 'Archivo', sans-serif;  
+        font-size: 3.6rem;
+        line-height: 3.6rem;
     }
     h3 {
+        font-family: 'Archivo', sans-serif;
         font-size: 4.2rem;
         line-height: 4.5rem;
     }
 
     h4 {
+        font-family: 'Archivo', sans-serif;
         font-size: 3rem;
         line-height: 3.6rem;
     }
+    h5 {
+
+    }
+    h6 {
+
+    }
+
+ 
 
     
 `;

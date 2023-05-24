@@ -18,19 +18,16 @@ const PersonalProjectCont = styled.section`
     }
 
     .project__container {
-        height: 100vh;
-        /* height: 100%; */
+        height: 80vh;
         width: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: red;
     }
     .project__row {
         display: flex;
         flex-direction: row-reverse;
-        /* justify-content: space-between; */
         gap: 100px;
         margin: 0 100px;
     }
@@ -53,7 +50,7 @@ const PersonalProjects = ({ projects }) => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: box,
-                    start: "top top",
+                    start: "top 10%",
                     end: `+=${rowWidth}`,
                     scrub: true,
                     pin: true,
@@ -77,7 +74,7 @@ const PersonalProjects = ({ projects }) => {
     }, []);
 
     return (
-        <PersonalProjectCont ref={container} id="projects">
+        <PersonalProjectCont ref={container} id="personal-projects">
             <h3 className="project__title">Title</h3>
             <div className="project__container">
                 <div className="project__row">

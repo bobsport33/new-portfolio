@@ -1,51 +1,27 @@
 import { css } from "styled-components";
 export const colors = {
-    neutral100: "#FAFAFA",
-    neutral200: "#F0F0F0",
-    neutral300: "#E3E3E3",
-    neutral400: "#949494",
-    neutral500: "#7A7A7A",
-    neutral600: "#595959",
-    neutral700: "#404040",
-    neutral800: "#262626",
-    neutral900: "#1C1C1C",
-    neutral1000: "#0A0A0A",
+    neutral100: "#e7e8ea",
+    neutral200: "#cfd1d4",
+    neutral300: "#b7b9bf",
+    neutral400: "#9fa2aa",
+    neutral500: "#878b95",
+    neutral600: "#6f747f",
+    neutral700: "#575d6a",
+    neutral800: "#3f4555",
+    neutral900: "#272e3f",
+    neutral1000: "#0f172a",
 
-    red100: "#FEE6EB",
-    red200: "#D7A2AE",
-    red300: "#DB0032",
-    red400: "#A80026",
-    red500: "#5C0015",
-
-    blue100: "#90B8DB",
-    blue200: "#7596B2",
-    blue300: "#5E788F",
-    blue400: "#485C6E",
-    blue500: "#2C3842",
-
-    tan100: "#F2EBDF",
-    tan200: "#E0D9CC",
-    tan300: "#ADA79D",
-    tan400: "#7A766F",
-    tan500: "#474541",
-
-    orange100: "#E8A76F",
-    orange200: "#BF7636",
-    orange300: "#9C602C",
-    orange400: "#69401D",
-    orange500: "#472C14",
-
-    yellow100: "#FFEEC7",
-    yellow200: "#FFD67A",
-    yellow300: "#E8BC58",
-    yellow400: "#B59345",
-    yellow500: "#826931",
+    blue100: "#667db9",
+    blue200: "#3352a1",
+    blue300: "#00278a",
+    blue400: "#00237c",
+    blue500: "#001753",
 };
 
 export const fonts = {
-    kumbh: "Kumbh Sans, sans-serif",
-    eurostyle: "eurostyle, sans-serif",
-    teko: "teko, sans-serif",
+    archivo: "Archivo, sans-serif",
+    archivoBlack: "Archivo Black, sans-serif",
+    judson: "Judson, serif",
 };
 
 export const media = {

@@ -18,14 +18,13 @@ const ProjectCont = styled.section`
     }
 
     .project__container {
-        height: 100vh;
+        height: 80vh;
         /* height: 100%; */
         width: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: teal;
     }
     .project__row {
         display: flex;
@@ -52,7 +51,7 @@ const Projects = ({ projects }) => {
                 ease: "none",
                 scrollTrigger: {
                     trigger: box,
-                    start: "top top",
+                    start: "top 10%",
                     end: `+=${rowWidth}`,
                     scrub: true,
                     pin: true,

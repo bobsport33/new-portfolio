@@ -91,6 +91,10 @@ const Header = () => {
     const menuClickHandler = (e: React.SyntheticEvent) => {
         setMenuOpen(!menuOpen);
     };
+
+    const closeModalHandeler = () => {
+        setMenuOpen(false);
+    };
     return (
         <HeaderCont open={menuOpen}>
             <div
@@ -102,13 +106,25 @@ const Header = () => {
             </div>
 
             <div className="header__menu">
-                <a href="#projects" className="projec">
+                <a
+                    href="#projects"
+                    className="header__link"
+                    onClick={closeModalHandeler}
+                >
                     Projects
                 </a>
-                <a href="#" className="header__link">
+                <a
+                    href="#personal-projects"
+                    className="header__link"
+                    onClick={closeModalHandeler}
+                >
                     Personal Projects
                 </a>
-                <a href="#" className="header__link">
+                <a
+                    href="#"
+                    className="header__link"
+                    onClick={closeModalHandeler}
+                >
                     Link Text
                 </a>
             </div>
