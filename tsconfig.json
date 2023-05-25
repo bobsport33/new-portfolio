@@ -24,8 +24,8 @@
         "**/*.tsx",
         "pages/_document.jsx",
         "pages/_app.jsx",
-        "components/Projects.jsx",
-        "components/ScollText.jsx",
+        "components/Projects.tsx",
+        "components/ScollText.tsx",
         "pages/index.jsx"
     ],
     "exclude": ["node_modules"]

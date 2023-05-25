@@ -30,7 +30,7 @@ const HeroCont = styled.section`
     .heading,
     .hero__text {
         color: ${colors.neutral100};
-      
+
         text-align: center;
         width: 100%;
 
@@ -74,9 +74,9 @@ const Hero = () => {
         mm.add(
             { isDesktop: "(min-width: 800px)", isMobile: "(max-width: 500px)" },
             (context) => {
-                let { isDesktop, isMobile } = context.conditions;
+                let { isDesktop, isMobile } = context.conditions!;
 
-                const ctx = gsap.context((self) => {
+                const ctx = gsap.context((self:any) => {
                     const container = self.selector(".container");
                     const text1 = self.selector(".heading");
                     const name1 = self.selector(".heading--span");

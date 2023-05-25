@@ -35,12 +35,23 @@ const ProjectCont = styled.section`
     }
 `;
 
-const Projects = ({ projects }) => {
+interface Project {
+    name: string;
+    url: string;
+    image: string;
+}
+
+interface Data {
+    projects: Project[];
+}
+
+const Projects = ({ projects }: Data) => {
+    console.log(projects);
     const container = useRef(null);
     gsap.registerPlugin(ScrollTrigger);
 
     useLayoutEffect(() => {
-        const ctx = gsap.context((self) => {
+        const ctx = gsap.context((self: any) => {
             const box = self.selector(".project__container");
             const row = self.selector(".project__row");
             let rowWidth = row[0].offsetWidth;
