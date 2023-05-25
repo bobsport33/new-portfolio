@@ -34,8 +34,17 @@ const ProjectCardCont = styled.a`
     }
 `;
 
-const ProjectCard = ({ data }) => {
-    function throttle(func, delay) {
+interface Data {
+    data: {
+        id: string;
+        name: string;
+        url: string;
+        image: string;
+    };
+}
+
+const ProjectCard = ({ data }: Data) => {
+    function throttle<T, U>(func: T, delay: U) {
         let timeoutId;
         let isThrottled = false;
 
@@ -92,8 +101,8 @@ const ProjectCard = ({ data }) => {
     return (
         <ProjectCardCont
             href="#"
-            onMouseMove={tiltHandler}
-            onMouseOut={removeTilt}
+            onMouseMove={throttledTiltElement}
+            onMouseOut={throttledRemoveTilt}
         >
             <img
                 src="https://picsum.photos/400/300"

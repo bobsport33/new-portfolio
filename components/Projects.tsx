@@ -51,7 +51,10 @@ const Projects = ({ projects }: Data) => {
     gsap.registerPlugin(ScrollTrigger);
 
     useLayoutEffect(() => {
-        const ctx = gsap.context((self: any) => {
+        const ctx = gsap.context((self: gsap.Context) => {
+            if (!self.selector) {
+                return;
+            }
             const box = self.selector(".project__container");
             const row = self.selector(".project__row");
             let rowWidth = row[0].offsetWidth;
