@@ -7,7 +7,7 @@ import { colors } from "../styles/variables";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ProjectCont = styled.section`
+const PersonalProjectCont = styled.section`
     display: flex;
     flex-direction: column;
 
@@ -19,7 +19,6 @@ const ProjectCont = styled.section`
 
     .project__container {
         height: 80vh;
-        /* height: 100%; */
         width: fit-content;
         display: flex;
         flex-direction: column;
@@ -28,8 +27,7 @@ const ProjectCont = styled.section`
     }
     .project__row {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: row-reverse;
         gap: 100px;
         margin: 0 100px;
     }
@@ -45,8 +43,7 @@ interface Data {
     projects: Project[];
 }
 
-const Projects = ({ projects }: Data) => {
-    console.log(projects);
+const PersonalProjects = ({ projects }: Data) => {
     const container = useRef(null);
     gsap.registerPlugin(ScrollTrigger);
 
@@ -59,10 +56,11 @@ const Projects = ({ projects }: Data) => {
             const row = self.selector(".project__row");
             let rowWidth = row[0].offsetWidth;
 
-            gsap.to(box, {
-                xPercent: -100,
-                x: () => innerWidth,
-                ease: "none",
+            // gsap.to(row, {
+            //     startAt: { x: "-100%" },
+            // });
+
+            const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: box,
                     start: "top 10%",
@@ -72,6 +70,15 @@ const Projects = ({ projects }: Data) => {
                     invalidateOnRefresh: true,
                 },
             });
+
+            tl.fromTo(
+                box,
+                { xPercent: -100, x: () => innerWidth },
+                {
+                    xPercent: 0,
+                    x: () => 0,
+                }
+            );
         }, container);
 
         return () => {
@@ -80,8 +87,8 @@ const Projects = ({ projects }: Data) => {
     }, []);
 
     return (
-        <ProjectCont ref={container} id="projects">
-            <h3 className="project__title">Projects</h3>
+        <PersonalProjectCont ref={container} id="personal-projects">
+            <h3 className="project__title">Title</h3>
             <div className="project__container">
                 <div className="project__row">
                     {/* {projects.map((project, index) => {
@@ -101,7 +108,17 @@ const Projects = ({ projects }: Data) => {
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
-                    />
+                    />{" "}
+                    <ProjectCard
+                        data={{
+                            id: "1",
+                            title: "this is a title",
+                            url: "#",
+                            image: "https://picsum.photos/400/300",
+                            description:
+                                "This is a description based off the image and title above. This will be adjusted for each card.",
+                        }}
+                    />{" "}
                     <ProjectCard
                         data={{
                             id: "1",
@@ -164,8 +181,8 @@ const Projects = ({ projects }: Data) => {
                     />
                 </div>
             </div>
-        </ProjectCont>
+        </PersonalProjectCont>
     );
 };
 
-export default Projects;
+export default PersonalProjects;

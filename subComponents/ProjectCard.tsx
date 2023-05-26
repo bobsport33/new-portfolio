@@ -30,25 +30,25 @@ const ProjectCardCont = styled.a`
         height: 300px;
         width: 400px;
         pointer-events: none;
-        /* pointer-events: none; */
     }
 `;
 
 interface Data {
     data: {
         id: string;
-        name: string;
+        title: string;
         url: string;
         image: string;
+        description: string;
     };
 }
 
 const ProjectCard = ({ data }: Data) => {
-    function throttle<T, U>(func: T, delay: U) {
-        let timeoutId;
+    function throttle(func: Function, delay: number) {
+        let timeoutId: ReturnType<typeof setTimeout> | null;
         let isThrottled = false;
 
-        return function (...args) {
+        return function (this: any, ...args: any[]) {
             if (!isThrottled) {
                 func.apply(this, args);
                 isThrottled = true;
@@ -60,8 +60,11 @@ const ProjectCard = ({ data }: Data) => {
         };
     }
 
-    const tiltHandler = (e) => {
-        const element = e.target;
+    const tiltHandler = (e: MouseEvent) => {
+        const element: HTMLElement = e.target as HTMLElement;
+        if (!element) {
+            return;
+        }
         const rect = element.getBoundingClientRect();
 
         // Calculate the position of the mouse relative to the element
@@ -80,8 +83,11 @@ const ProjectCard = ({ data }: Data) => {
         element.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
     };
 
-    const removeTilt = (event) => {
-        const element = event.target;
+    const removeTilt = (event: MouseEvent) => {
+        const element: HTMLElement = event.target as HTMLElement;
+        if (!element) {
+            return;
+        }
 
         // Add transition effect to ease the tilt back
         element.style.transition = "transform 0.5s ease";
@@ -100,20 +106,13 @@ const ProjectCard = ({ data }: Data) => {
 
     return (
         <ProjectCardCont
-            href="#"
+            href={data.url}
             onMouseMove={throttledTiltElement}
             onMouseOut={throttledRemoveTilt}
         >
-            <img
-                src="https://picsum.photos/400/300"
-                alt="TEXT"
-                className="card__image"
-            />
+            <img src={data.image} alt="TEXT" className="card__image" />
             <h4 className="card__title">{data.title}</h4>
-            <p className="card__description">
-                This is a description based off the image and title above. This
-                will be adjusted for each card.
-            </p>
+            <p className="card__description">{data.description}</p>
         </ProjectCardCont>
     );
 };
