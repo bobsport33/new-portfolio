@@ -25,6 +25,7 @@ const HeroCont = styled.section`
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: -1;
     }
 
     .heading,
@@ -72,11 +73,11 @@ const Hero = () => {
 
     useLayoutEffect(() => {
         mm.add(
-            { isDesktop: "(min-width: 800px)", isMobile: "(max-width: 500px)" },
+            { isDesktop: "(min-width: 800px)", isMobile: "(max-width: 800px)" },
             (context) => {
                 let { isDesktop, isMobile } = context.conditions!;
 
-                const ctx = gsap.context((self:any) => {
+                const ctx = gsap.context((self: any) => {
                     const container = self.selector(".container");
                     const text1 = self.selector(".heading");
                     const name1 = self.selector(".heading--span");

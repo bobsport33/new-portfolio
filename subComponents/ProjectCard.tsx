@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../styles/variables";
+import { colors, media } from "../styles/variables";
 
 const ProjectCardCont = styled.a`
     border-radius: 30px;
@@ -11,9 +11,14 @@ const ProjectCardCont = styled.a`
     flex-direction: column;
     gap: 30px;
     padding: 40px 30px;
+    width: fit-content;
     transition: transform 0.1s ease;
     &:hover {
         cursor: pointer;
+    }
+
+    @media ${media.mobile} {
+        padding: 30px 20px;
     }
 
     .card__title {
@@ -27,9 +32,17 @@ const ProjectCardCont = styled.a`
     }
 
     .card__image {
-        height: 300px;
+        aspect-ratio: 4/3;
         width: 400px;
         pointer-events: none;
+
+        @media ${media.tablet} {
+            width: 300px;
+        }
+
+        @media ${media.mobile} {
+            width: 225px;
+        }
     }
 `;
 

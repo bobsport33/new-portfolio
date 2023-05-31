@@ -35,6 +35,11 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Judson', serif;
         font-size: 2.6rem;
         line-height: 3rem;
+
+        @media ${media.tablet} {
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+        }
     }
     h1 {
         font-family: 'Archivo', sans-serif;  
@@ -50,15 +55,27 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Archivo', sans-serif;
         font-size: 4.2rem;
         line-height: 4.5rem;
+
+        @media ${media.tablet} {
+            font-size: 3.6rem;
+            line-height: 4rem;
+        }
     }
 
     h4 {
         font-family: 'Archivo', sans-serif;
         font-size: 3rem;
         line-height: 3.6rem;
+
+        @media ${media.tablet} {
+            font-size: 2.6rem;
+            line-height: 3rem;
+        }
     }
     h5 {
-
+        font-family: 'Archivo', sans-serif;
+        font-size: 2.8rem;
+        line-height: 3.2rem;
     }
     h6 {
 

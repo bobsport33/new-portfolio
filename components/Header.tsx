@@ -1,8 +1,12 @@
 import React, { ReactEventHandler, useState } from "react";
-import styled, { css } from "styled-components";
+import styled, { StyledComponent, css } from "styled-components";
 import { colors } from "../styles/variables";
 
-const HeaderCont = styled.div`
+interface Header {
+    ariaOpen: boolean;
+}
+
+const HeaderCont = styled.div<Header>`
     position: fixed;
     top: 25px;
     right: 25px;
@@ -11,8 +15,8 @@ const HeaderCont = styled.div`
     flex-direction: column;
     align-items: flex-end;
 
-    ${({ open }) => {
-        if (open) {
+    ${({ ariaOpen }) => {
+        if (ariaOpen) {
             return css`
                 .header__menu {
                     height: 200px !important;
@@ -112,7 +116,7 @@ const Header = () => {
         setMenuOpen(false);
     };
     return (
-        <HeaderCont open={menuOpen}>
+        <HeaderCont ariaOpen={menuOpen}>
             <div
                 className="header__btn"
                 role="button"
@@ -137,11 +141,11 @@ const Header = () => {
                     Personal Projects
                 </a>
                 <a
-                    href="#"
+                    href="#about"
                     className="header__link"
                     onClick={closeModalHandeler}
                 >
-                    Link Text
+                    About
                 </a>
             </div>
         </HeaderCont>

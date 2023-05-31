@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../styles/variables";
+import { colors, media } from "../styles/variables";
 
 const AboutCont = styled.section`
     display: flex;
@@ -9,15 +9,45 @@ const AboutCont = styled.section`
     align-items: center;
     margin: 80px auto;
 
+    @media ${media.tablet} {
+        width: 90%;
+        gap: 40px;
+    }
+
+    @media (max-width: 725px) {
+        flex-direction: column;
+    }
+
     .about__container {
         display: flex;
         flex-direction: column;
         gap: 16px;
+
+        @media (max-width: 725px) {
+            width: 85%;
+        }
+
+        @media ${media.mobile} {
+            width: 90%;
+        }
     }
 
     .about__img {
         height: fit-content;
         aspect-ratio: 4/3;
+        width: 400px;
+
+        @media ${media.tablet} {
+            width: 300px;
+        }
+
+        @media (max-width: 725px) {
+            width: 85%;
+        }
+
+        @media ${media.mobile} {
+            width: 90%;
+        }
     }
 
     .about__heading,
@@ -28,7 +58,7 @@ const AboutCont = styled.section`
 
 const About = () => {
     return (
-        <AboutCont>
+        <AboutCont id="about">
             <img
                 src="https://picsum.photos/400/300"
                 alt=""

@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import styled from "styled-components";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import ProjectCard from "../subComponents/ProjectCard";
-import { colors } from "../styles/variables";
+import { colors, media } from "../styles/variables";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,6 +11,14 @@ const ProjectCont = styled.section`
     display: flex;
     flex-direction: column;
     height: 5000px;
+
+    @media ${media.tablet} {
+        height: 3800px;
+    }
+
+    @media ${media.mobile} {
+        height: 3100px;
+    }
 
     .project__title {
         color: ${colors.neutral100};
@@ -33,6 +41,11 @@ const ProjectCont = styled.section`
         justify-content: space-between;
         gap: 100px;
         margin: 0 100px;
+
+        @media ${media.tablet} {
+            gap: 50px;
+            margin: 0 50px;
+        }
     }
 `;
 
