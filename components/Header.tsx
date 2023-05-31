@@ -23,6 +23,21 @@ const HeaderCont = styled.div`
                     height: 23px !important;
                     pointer-events: all !important;
                 }
+
+                .header__line {
+                    background-color: ${colors.neutral100} !important;
+
+                    &::before {
+                        transform: rotate(400deg) translateY(5px)
+                            translateX(3px);
+                        transform-origin: 50%;
+                    }
+                    &::after {
+                        transform: rotate(-400deg) translateY(-5px)
+                            translateX(3px);
+                        transform-origin: 50%;
+                    }
+                }
             `;
         }
     }}
@@ -53,6 +68,7 @@ const HeaderCont = styled.div`
             background-color: ${colors.neutral1000};
             position: relative;
             display: block;
+            transition: transform 0.5s;
         }
 
         &::before {

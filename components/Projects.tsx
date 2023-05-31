@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ProjectCont = styled.section`
     display: flex;
     flex-direction: column;
+    height: 5000px;
 
     .project__title {
         color: ${colors.neutral100};
@@ -98,16 +99,7 @@ const Projects = ({ projects }: Data) => {
                             title: "this is a title",
                             url: "#",
                             image: "https://picsum.photos/400/300",
-                            description:
-                                "This is a description based off the image and title above. This will be adjusted for each card.",
-                        }}
-                    />
-                    <ProjectCard
-                        data={{
-                            id: "1",
-                            title: "this is a title",
-                            url: "#",
-                            image: "https://picsum.photos/400/300",
+                            alt: "",
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -118,6 +110,7 @@ const Projects = ({ projects }: Data) => {
                             title: "this is a title",
                             url: "#",
                             image: "https://picsum.photos/400/300",
+                            alt: "",
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -128,6 +121,7 @@ const Projects = ({ projects }: Data) => {
                             title: "this is a title",
                             url: "#",
                             image: "https://picsum.photos/400/300",
+                            alt: "",
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -138,6 +132,7 @@ const Projects = ({ projects }: Data) => {
                             title: "this is a title",
                             url: "#",
                             image: "https://picsum.photos/400/300",
+                            alt: "",
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -148,6 +143,7 @@ const Projects = ({ projects }: Data) => {
                             title: "this is a title",
                             url: "#",
                             image: "https://picsum.photos/400/300",
+                            alt: "",
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -158,6 +154,18 @@ const Projects = ({ projects }: Data) => {
                             title: "this is a title",
                             url: "#",
                             image: "https://picsum.photos/400/300",
+                            alt: "",
+                            description:
+                                "This is a description based off the image and title above. This will be adjusted for each card.",
+                        }}
+                    />{" "}
+                    <ProjectCard
+                        data={{
+                            id: "1",
+                            title: "this is a title",
+                            url: "#",
+                            image: "https://picsum.photos/400/300",
+                            alt: "",
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}

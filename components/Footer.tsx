@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { colors } from "../styles/variables";
 
 const FooterCont = styled.section`
-    margin-top: 5000px;
     height: 500px;
     background-color: ${colors.neutral500};
 `;

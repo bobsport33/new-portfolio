@@ -8,6 +8,8 @@ import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import Spacer from "../components/Spacer";
 import PersonalProjects from "../components/PersonalProjects";
+import About from "../components/About";
+
 export default function Home() {
     return (
         <>
@@ -39,8 +41,8 @@ export default function Home() {
                 <Hero />
                 <ScrollText />
                 <Projects projects={data.projects} />
-                <Spacer />
                 <PersonalProjects />
+                <About />
                 <Footer />
             </main>
         </>

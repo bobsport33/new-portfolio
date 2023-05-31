@@ -39,6 +39,7 @@ interface Data {
         title: string;
         url: string;
         image: string;
+        alt: string;
         description: string;
     };
 }
