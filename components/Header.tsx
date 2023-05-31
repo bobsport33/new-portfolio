@@ -29,7 +29,7 @@ const HeaderCont = styled.div`
 
                     &::before {
                         transform: rotate(400deg) translateY(5px)
-                            translateX(3px);
+                            translateX(4px);
                         transform-origin: 50%;
                     }
                     &::after {
@@ -87,9 +87,9 @@ const HeaderCont = styled.div`
         justify-content: center;
         gap: 30px;
         height: 0;
-        width: 100px;
         transition: height 0.5s;
         z-index: 10;
+        padding: 0 20px;
     }
 
     .header__link {
