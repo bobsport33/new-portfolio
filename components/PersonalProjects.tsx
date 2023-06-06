@@ -48,9 +48,12 @@ const PersonalProjectCont = styled.section`
 `;
 
 interface Project {
-    name: string;
+    id: string;
+    title: string;
     url: string;
     image: string;
+    alt: string;
+    description: string;
 }
 
 interface Data {
@@ -113,7 +116,7 @@ const PersonalProjects = ({ projects }: Data) => {
                             />
                         );
                     })} */}
-                    <ProjectCard
+                    {/* <ProjectCard
                         data={{
                             id: "1",
                             title: "this is a title",
@@ -200,7 +203,7 @@ const PersonalProjects = ({ projects }: Data) => {
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
-                    />
+                    /> */}
                 </div>
             </div>
         </PersonalProjectCont>

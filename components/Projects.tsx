@@ -50,9 +50,12 @@ const ProjectCont = styled.section`
 `;
 
 interface Project {
-    name: string;
+    id: string;
+    title: string;
     url: string;
     image: string;
+    alt: string;
+    description: string;
 }
 
 interface Data {
@@ -99,6 +102,7 @@ const Projects = ({ projects }: Data) => {
             <div className="project__container">
                 <div className="project__row">
                     {/* {projects.map((project, index) => {
+                        console.log(project)
                         return (
                             <ProjectCard
                                 data={project}

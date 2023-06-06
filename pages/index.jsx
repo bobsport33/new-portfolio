@@ -41,7 +41,7 @@ export default function Home() {
                 <Hero />
                 <ScrollText />
                 <Projects projects={data.projects} />
-                <PersonalProjects />
+                <PersonalProjects projects={data.personalProjects} />
                 <About />
                 <Footer />
             </main>

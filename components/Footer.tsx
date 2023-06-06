@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { colors, fonts, media } from "../styles/variables";
+import Github from "../public/images/github-icon.svg";
+import Linkedin from "../public/images/linkedin-icon.svg";
 
 const FooterCont = styled.section`
     background-color: ${colors.neutral800};
@@ -40,6 +42,11 @@ const FooterCont = styled.section`
         text-align: center;
         padding: 10px;
     }
+
+    .icon {
+        height: 40px;
+        width: 40px;
+    }
 `;
 
 const Footer = () => {
@@ -64,6 +71,20 @@ const Footer = () => {
                         bob62kelly@gmail.com
                     </a>
                 </p>
+                <a
+                    className="icon"
+                    href="https://github.com/bobsport33"
+                    target="_blank"
+                >
+                    <Github />
+                </a>
+                <a
+                    className="icon"
+                    href="https://github.com/bobsport33"
+                    target="_blank"
+                >
+                    <Linkedin />
+                </a>
             </div>
             <div className="copyright">
                 <p className="copyright__text">Copyright©{year} Bob Kelly</p>

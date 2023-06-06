@@ -35,6 +35,7 @@ const ProjectCardCont = styled.a`
         aspect-ratio: 4/3;
         width: 400px;
         pointer-events: none;
+        object-fit: contain;
 
         @media ${media.tablet} {
             width: 300px;
@@ -121,10 +122,11 @@ const ProjectCard = ({ data }: Data) => {
     return (
         <ProjectCardCont
             href={data.url}
+            target="_blank"
             onMouseMove={throttledTiltElement}
             onMouseOut={throttledRemoveTilt}
         >
-            <img src={data.image} alt="TEXT" className="card__image" />
+            <img src={data.image} alt={data.alt} className="card__image" />
             <h4 className="card__title">{data.title}</h4>
             <p className="card__description">{data.description}</p>
         </ProjectCardCont>
