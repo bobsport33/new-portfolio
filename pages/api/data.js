@@ -146,5 +146,12 @@ const data = {
         "Wordpress",
         "Python",
     ],
+    bio: "I am a highly skilled web developer. ",
+    scrollyText: [
+        "Hello, my name is Bob.",
+        "Bob is a web developer.",
+        "Bob can build your next web project.",
+        "See what Bob can do (for you).",
+    ],
 };
 export default data;

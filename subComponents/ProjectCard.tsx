@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors, media } from "../styles/variables";
+import { colors, media, fonts } from "../styles/variables";
 
 const ProjectCardCont = styled.a`
     border-radius: 30px;
@@ -44,6 +44,24 @@ const ProjectCardCont = styled.a`
         @media ${media.mobile} {
             width: 225px;
         }
+    }
+
+    .card__skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card__skill {
+        padding: 15px 30px;
+        border-radius: 50%;
+        background-color: ${colors.neutral400};
+        color: ${colors.blue400};
+        font-family: ${fonts.archivo};
+        font-weight: 600;
     }
 `;
 

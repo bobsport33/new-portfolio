@@ -3,18 +3,24 @@ import styled from "styled-components";
 import { colors, fonts, media } from "../styles/variables";
 import Github from "../public/svg/github-icon.svg";
 import Linkedin from "../public/svg/linkedin-icon.svg";
+import MailIcon from "../public/svg/mail-svgrepo-com.svg";
 
 const FooterCont = styled.section`
     background-color: ${colors.neutral800};
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    padding: 30px;
 
     .info__container {
         padding: 30px;
         display: flex;
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 45px;
     }
 
     .info__heading {
@@ -40,7 +46,6 @@ const FooterCont = styled.section`
         font-family: ${fonts.archivo};
         color: ${colors.neutral400};
         text-align: center;
-        padding: 10px;
     }
 
     .icon {
@@ -54,23 +59,9 @@ const Footer = () => {
 
     return (
         <FooterCont>
+            <h3 className="info__heading">Let's Get in Touch</h3>
+
             <div className="info__container">
-                <h5 className="info__heading">Contact</h5>
-                <p className="info">
-                    Phone:{" "}
-                    <a href="tel:+18473456751" className="info__link">
-                        847-345-6751
-                    </a>
-                </p>
-                <p className="info">
-                    Email:{" "}
-                    <a
-                        href="mailto:bob62kelly@gmail.com"
-                        className="info__link"
-                    >
-                        bob62kelly@gmail.com
-                    </a>
-                </p>
                 <a
                     className="icon"
                     href="https://github.com/bobsport33"
@@ -84,6 +75,9 @@ const Footer = () => {
                     target="_blank"
                 >
                     <Linkedin />
+                </a>
+                <a href="mailto:bob62kelly@gmail.com" className="icon">
+                    <MailIcon />
                 </a>
             </div>
             <div className="copyright">

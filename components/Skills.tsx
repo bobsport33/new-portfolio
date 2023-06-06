@@ -19,7 +19,7 @@ const SkillsCont = styled.section`
     gap: 50px;
 
     .skill__heading {
-        color: ${colors.neutral100};
+        color: ${colors.neutral200};
     }
 
     .skill__row {
@@ -43,7 +43,7 @@ const SkillsCont = styled.section`
 
         svg {
             path {
-                fill: #fff;
+                fill: ${colors.neutral400};
             }
         }
     }
@@ -56,7 +56,7 @@ const SkillsCont = styled.section`
 const Skills = () => {
     return (
         <SkillsCont>
-            <h4 className="skill__heading">Skills</h4>
+            <h3 className="skill__heading">Skills</h3>
             <div className="skill__row">
                 <div className="skill">
                     <div className="skill__icon">
