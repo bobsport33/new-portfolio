@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { colors, fonts, media } from "../styles/variables";
-import Github from "../public/images/github-icon.svg";
-import Linkedin from "../public/images/linkedin-icon.svg";
+import Github from "../public/svg/github-icon.svg";
+import Linkedin from "../public/svg/linkedin-icon.svg";
 
 const FooterCont = styled.section`
     background-color: ${colors.neutral800};

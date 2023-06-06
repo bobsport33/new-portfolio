@@ -117,6 +117,7 @@ const Projects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ["javscript", "react"],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -128,6 +129,7 @@ const Projects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ["javscript", "react"],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -139,6 +141,7 @@ const Projects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ["javscript", "react"],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -150,6 +153,7 @@ const Projects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ["javscript", "react"],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -161,6 +165,7 @@ const Projects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ["javscript", "react"],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -172,6 +177,7 @@ const Projects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ["javscript", "react"],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -183,6 +189,7 @@ const Projects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ["javscript", "react"],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}

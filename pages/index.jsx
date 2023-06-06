@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import Spacer from "../components/Spacer";
 import PersonalProjects from "../components/PersonalProjects";
 import About from "../components/About";
+import Skills from "../components/Skills";
 
 export default function Home() {
     return (
@@ -43,6 +44,7 @@ export default function Home() {
                 <Projects projects={data.projects} />
                 <PersonalProjects projects={data.personalProjects} />
                 <About />
+                <Skills />
                 <Footer />
             </main>
         </>

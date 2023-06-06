@@ -54,6 +54,7 @@ interface Data {
         url: string;
         image: string;
         alt: string;
+        skills: string[];
         description: string;
     };
 }
@@ -128,7 +129,12 @@ const ProjectCard = ({ data }: Data) => {
         >
             <img src={data.image} alt={data.alt} className="card__image" />
             <h4 className="card__title">{data.title}</h4>
-            <p className="card__description">{data.description}</p>
+            <div className="card__skills">
+                {data.skills &&
+                    data.skills.map((skill: string) => {
+                        return <p className="card__skill">{skill}</p>;
+                    })}
+            </div>
         </ProjectCardCont>
     );
 };

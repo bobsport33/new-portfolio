@@ -78,7 +78,9 @@ export const GlobalStyles = createGlobalStyle`
         line-height: 3.2rem;
     }
     h6 {
-
+        font-family: 'Archivo', sans-serif;
+        font-size: 2rem;
+        line-height: 2.4rem;
     }
 
  

@@ -116,13 +116,14 @@ const PersonalProjects = ({ projects }: Data) => {
                             />
                         );
                     })} */}
-                    {/* <ProjectCard
+                    <ProjectCard
                         data={{
                             id: "1",
                             title: "this is a title",
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ['javascript', 'react'],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -134,6 +135,7 @@ const PersonalProjects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ['javascript', 'react'],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -145,6 +147,7 @@ const PersonalProjects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ['javascript', 'react'],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -156,6 +159,7 @@ const PersonalProjects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ['javascript', 'react'],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -167,6 +171,7 @@ const PersonalProjects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ['javascript', 'react'],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -178,6 +183,7 @@ const PersonalProjects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ['javascript', 'react'],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -189,6 +195,7 @@ const PersonalProjects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ['javascript', 'react'],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
@@ -200,10 +207,11 @@ const PersonalProjects = ({ projects }: Data) => {
                             url: "#",
                             image: "https://picsum.photos/400/300",
                             alt: "",
+                            skills: ['javascript', 'react'],
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
-                    /> */}
+                    />
                 </div>
             </div>
         </PersonalProjectCont>
