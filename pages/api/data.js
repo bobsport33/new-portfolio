@@ -151,7 +151,7 @@ const data = {
         "Hello, my name is Bob.",
         "Bob is a web developer.",
         "Bob can build your next web project.",
-        "See what Bob can do (for you).",
+        "See what Bob can do build.",
     ],
 };
 export default data;
