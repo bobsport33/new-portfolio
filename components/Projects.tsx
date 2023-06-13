@@ -63,7 +63,7 @@ interface Data {
 }
 
 const Projects = ({ projects }: Data) => {
-    console.log(projects);
+
     const container = useRef(null);
     gsap.registerPlugin(ScrollTrigger);
 
@@ -102,7 +102,7 @@ const Projects = ({ projects }: Data) => {
             <div className="project__container">
                 <div className="project__row">
                     {/* {projects.map((project, index) => {
-                        console.log(project)
+                    
                         return (
                             <ProjectCard
                                 data={project}
