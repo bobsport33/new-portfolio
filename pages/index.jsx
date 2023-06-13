@@ -6,7 +6,6 @@ import Hero from "../components/Hero";
 import ScrollText from "../components/ScollText";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
-import Spacer from "../components/Spacer";
 import PersonalProjects from "../components/PersonalProjects";
 import About from "../components/About";
 import Skills from "../components/Skills";
