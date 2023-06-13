@@ -56,12 +56,17 @@ const ProjectCardCont = styled.a`
     }
 
     .card__skill {
-        padding: 15px 30px;
-        border-radius: 50%;
+        padding: 15px;
+        border-radius: 30px;
         background-color: ${colors.neutral400};
         color: ${colors.blue400};
         font-family: ${fonts.archivo};
         font-weight: 600;
+        font-size: 2rem;
+
+        @media ${media.tablet} {
+            font-size: 1.6rem;
+        }
     }
 `;
 

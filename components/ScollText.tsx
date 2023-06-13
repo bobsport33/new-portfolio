@@ -12,7 +12,7 @@ const HeroCont = styled.section`
     overflow-x: hidden;
 
     .container {
-        height: calc(100vh + 30000px);
+        height: calc(100vh + 15000px);
         width: 100%;
     }
 
@@ -83,12 +83,13 @@ const Hero = () => {
                     const text1Other = self.selector(".heading--text");
                     const textCont2 = self.selector(".text-container--2");
                     const textCont3 = self.selector(".text-container--3");
+                    const textCont4 = self.selector(".text-container--4");
 
                     const tl = gsap.timeline({
                         scrollTrigger: {
                             trigger: container,
                             start: "top top",
-                            end: "+=30000",
+                            end: "+=15000",
                             scrub: 1,
                         },
                     });
@@ -121,6 +122,18 @@ const Hero = () => {
                             }
                         )
                         .to(textCont3, { y: "-30%", opacity: 0 })
+                        .to(text1, {
+                            x: isDesktop ? -110 : isMobile ? -61 : -73,
+                        })
+                        .fromTo(
+                            textCont4,
+                            { y: "30%", opacity: 0 },
+                            {
+                                y: 0,
+                                opacity: 1,
+                            }
+                        )
+                        .to(textCont4, { y: "-30%", opacity: 0 })
                         .to(name1, { opacity: 0 });
                 }, container);
 
@@ -147,6 +160,12 @@ const Hero = () => {
                 </div>
                 <div className="text-container text-container--3">
                     <h2 className={"hero__text hero__text--3"}>
+                        some different<span className={"hero__span"}>text</span>{" "}
+                        about something.
+                    </h2>
+                </div>
+                <div className="text-container text-container--4">
+                    <h2 className={"hero__text hero__text--4"}>
                         some different<span className={"hero__span"}>text</span>{" "}
                         about something.
                     </h2>

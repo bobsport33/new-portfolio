@@ -94,6 +94,7 @@ const HeaderCont = styled.div<Header>`
         transition: height 0.5s;
         z-index: 10;
         padding: 0 20px;
+        overflow: hidden;
     }
 
     .header__link {
