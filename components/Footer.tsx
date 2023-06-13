@@ -51,6 +51,15 @@ const FooterCont = styled.section`
     .icon {
         height: 40px;
         width: 40px;
+        svg {
+            transition: transform 0.3s;
+        }
+
+        &:hover {
+            svg {
+                transform: scale(1.1);
+            }
+        }
     }
 `;
 

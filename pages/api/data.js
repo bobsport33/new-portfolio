@@ -117,11 +117,11 @@ const data = {
                 "This test project inspired the hero design of this website. It is anotther example of using GSAP and ScrollTrigger. For this project, I also learned how to integrate GSAP into a React ecosystem.",
         },
         {
-            title: "Mad Maestro Brewing Co",
-            url: "https://bobsport33.github.io/Mad-Maestro-Brewing-Co/",
+            title: "Mix-a_Six",
+            url: "",
             image: "./img/image.png",
-            alt: "snapshot of a brewery webpage",
-            skills: ["Javascript", "SASS"],
+            alt: "snapshot of a webpage",
+            skills: ["NextJS", "TypeScript", "Postgres DB"],
             description:
                 "I happen to be a homebrewer, and when I was thinking of test projects to make I decided to make a homepage for my personal brewery.",
         },
