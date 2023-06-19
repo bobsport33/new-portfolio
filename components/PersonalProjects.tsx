@@ -10,14 +10,14 @@ gsap.registerPlugin(ScrollTrigger);
 const PersonalProjectCont = styled.section`
     display: flex;
     flex-direction: column;
-    height: 5300px;
+    height: 5800px;
 
     @media ${media.tablet} {
-        height: 4100px;
+        height: 4500px;
     }
 
     @media ${media.mobile} {
-        height: 3200px;
+        height: 3800px;
     }
 
     .project__title {
@@ -43,6 +43,7 @@ const PersonalProjectCont = styled.section`
         @media ${media.tablet} {
             gap: 50px;
             margin: 0 50px;
+            align-items: flex-start;
         }
     }
 `;
@@ -54,6 +55,7 @@ interface Project {
     image: string;
     alt: string;
     description: string;
+    skills: string[];
 }
 
 interface Data {
@@ -105,18 +107,18 @@ const PersonalProjects = ({ projects }: Data) => {
 
     return (
         <PersonalProjectCont ref={container} id="personal-projects">
-            <h3 className="project__title">Title</h3>
+            <h3 className="project__title">Personal Projects</h3>
             <div className="project__container">
                 <div className="project__row">
-                    {/* {projects.map((project, index) => {
+                    {projects.map((project, index) => {
                         return (
                             <ProjectCard
                                 data={project}
-                                id={`project-${index}`}
+                                key={`project-${index}`}
                             />
                         );
-                    })} */}
-                    <ProjectCard
+                    })}
+                    {/* <ProjectCard
                         data={{
                             id: "1",
                             title: "this is a title",
@@ -211,7 +213,7 @@ const PersonalProjects = ({ projects }: Data) => {
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
-                    />
+                    /> */}
                 </div>
             </div>
         </PersonalProjectCont>

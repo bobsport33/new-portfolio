@@ -45,6 +45,7 @@ const ProjectCont = styled.section`
         @media ${media.tablet} {
             gap: 50px;
             margin: 0 50px;
+            align-items: flex-start;
         }
     }
 `;
@@ -56,6 +57,7 @@ interface Project {
     image: string;
     alt: string;
     description: string;
+    skills: string[];
 }
 
 interface Data {
@@ -63,7 +65,6 @@ interface Data {
 }
 
 const Projects = ({ projects }: Data) => {
-
     const container = useRef(null);
     gsap.registerPlugin(ScrollTrigger);
 
@@ -101,16 +102,15 @@ const Projects = ({ projects }: Data) => {
             <h3 className="project__title">Projects</h3>
             <div className="project__container">
                 <div className="project__row">
-                    {/* {projects.map((project, index) => {
-                    
+                    {projects.map((project, index) => {
                         return (
                             <ProjectCard
                                 data={project}
-                                id={`project-${index}`}
+                                key={`project-${index}`}
                             />
                         );
-                    })} */}
-                    <ProjectCard
+                    })}
+                    {/* <ProjectCard
                         data={{
                             id: "1",
                             title: "this is a title",
@@ -193,7 +193,7 @@ const Projects = ({ projects }: Data) => {
                             description:
                                 "This is a description based off the image and title above. This will be adjusted for each card.",
                         }}
-                    />
+                    /> */}
                 </div>
             </div>
         </ProjectCont>

@@ -5,7 +5,7 @@ const data = {
             url: "http://wwww.uretekusa.com",
             image: "/images/uretek screenshot.PNG",
             alt: "snapshot of Uretek's homepage",
-            skills: ["NextJS", "React", "Headless CMS", "Postgres DB"],
+            skills: ["NextJS", "Headless CMS", "React", "Postgres DB"],
             description: "This project was build in NextJS and Strapi.",
         },
         {
@@ -67,7 +67,7 @@ const data = {
             url: "https://cerulean-souffle-2ca846.netlify.app/",
             image: "/images/bff-react.PNG",
             alt: "snapshot of a website that looks like a football field",
-            skills: ["React"],
+            skills: ["React", "Custom Python API"],
             description:
                 "This appliction uses a Python API that I wrote to generate individual players target share percentages. This project is a homepage that allows the user to look up player target share data by year or week.",
         },
@@ -76,7 +76,7 @@ const data = {
             url: "https://github.com/bobsport33/Backyard-Fantasy-Football-React-Native",
             image: "/images/bff_app.jpg",
             alt: "snapshot of a mobile app screen",
-            skills: ["React Native"],
+            skills: ["React Native", "Custom Python API"],
             description:
                 "This application also uses the Python API I created. This is a mobile version of the application created in React Native.",
         },
@@ -118,7 +118,7 @@ const data = {
         },
         {
             title: "Mix-a_Six",
-            url: "",
+            url: "https://mix-a-six-ts.vercel.app/",
             image: "./img/image.png",
             alt: "snapshot of a webpage",
             skills: ["NextJS", "TypeScript", "Postgres DB"],

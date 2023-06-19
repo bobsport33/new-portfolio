@@ -13,7 +13,7 @@ const FooterCont = styled.section`
     align-items: center;
     position: relative;
     z-index: 10;
-    padding: 30px;
+    padding: 80px 15px;
 
     .info__container {
         padding: 30px;
@@ -25,6 +25,7 @@ const FooterCont = styled.section`
 
     .info__heading {
         color: ${colors.neutral100};
+        text-align: center;
     }
 
     .info {
@@ -49,8 +50,8 @@ const FooterCont = styled.section`
     }
 
     .icon {
-        height: 40px;
-        width: 40px;
+        height: 60px;
+        width: 60px;
         svg {
             transition: transform 0.3s;
         }
@@ -90,7 +91,7 @@ const Footer = () => {
                 </a>
             </div>
             <div className="copyright">
-                <p className="copyright__text">Copyright©{year} Bob Kelly</p>
+                <p className="copyright__text">Copyright ©{year} Bob Kelly</p>
             </div>
         </FooterCont>
     );
