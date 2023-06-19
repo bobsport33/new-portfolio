@@ -34,12 +34,16 @@ const HeroCont = styled.section`
         text-align: center;
         width: 100%;
 
+        @media (max-width: 1100px) {
+            font-size: 3.2rem;
+        }
+
         @media (max-width: 800px) {
             font-size: 2.4rem;
         }
 
-        @media (max-width: 500px) {
-            font-size: 2rem;
+        @media (max-width: 575px) {
+            font-size: 1.6rem;
         }
     }
 
@@ -72,9 +76,15 @@ const Hero = () => {
 
     useLayoutEffect(() => {
         mm.add(
-            { isDesktop: "(min-width: 800px)", isMobile: "(max-width: 800px)" },
+            {
+                isDesktop: "(min-width: 1100px)",
+                isTablet: "(max-width: 1100px) and (min-width: 801px)",
+                isSmallTab: "(max-width: 800px) and (min-width: 575px)",
+                isMobile: "(max-width: 575px)",
+            },
             (context) => {
-                let { isDesktop, isMobile } = context.conditions!;
+                let { isDesktop, isTablet, isSmallTab, isMobile } =
+                    context.conditions!;
 
                 const ctx = gsap.context((self: any) => {
                     const container = self.selector(".container");
@@ -94,12 +104,22 @@ const Hero = () => {
                         },
                     });
 
-                    tl.fromTo(text1, { scale: isMobile ? 2 : 3 }, { scale: 1 })
+                    tl.fromTo(
+                        text1,
+                        { scale: isDesktop ? 2.5 : 2 },
+                        { scale: 1 }
+                    )
                         .to(text1Other, {
                             opacity: 0,
                         })
                         .to(text1, {
-                            x: isDesktop ? -230 : isMobile ? -125 : -150,
+                            x: isDesktop
+                                ? -150
+                                : isTablet
+                                ? -132
+                                : isSmallTab
+                                ? -102
+                                : -70,
                         })
                         .fromTo(
                             textCont2,
@@ -111,7 +131,13 @@ const Hero = () => {
                         )
                         .to(textCont2, { y: "-30%", opacity: 0 })
                         .to(text1, {
-                            x: isDesktop ? -110 : isMobile ? -61 : -73,
+                            x: isDesktop
+                                ? -160
+                                : isTablet
+                                ? -138
+                                : isSmallTab
+                                ? -106
+                                : -73,
                         })
                         .fromTo(
                             textCont3,
@@ -123,7 +149,13 @@ const Hero = () => {
                         )
                         .to(textCont3, { y: "-30%", opacity: 0 })
                         .to(text1, {
-                            x: isDesktop ? -110 : isMobile ? -61 : -73,
+                            x: isDesktop
+                                ? 33
+                                : isTablet
+                                ? 28
+                                : isSmallTab
+                                ? 22
+                                : 15,
                         })
                         .fromTo(
                             textCont4,
@@ -147,27 +179,27 @@ const Hero = () => {
             <div className="container">
                 <div className="heading-container">
                     <h1 className={"heading"}>
-                        <span className={"heading--text"}>this is some </span>
-                        <span className={"heading--span"}>text</span>
-                        <span className={"heading--text"}>.</span>
+                        <span className={"heading--text"}>Meet </span>
+                        <span className={"heading--span"}>Bob</span>
+                        <span className={"heading--text"}> the developer.</span>
                     </h1>
                 </div>
                 <div className="text-container text-container--2">
                     <h2 className={"hero__text hero__text--2"}>
-                        <span className={"hero__span"}>text</span> about
-                        something.
+                        <span className={"hero__span"}>Bob</span> creates
+                        stunning projects.
                     </h2>
                 </div>
                 <div className="text-container text-container--3">
                     <h2 className={"hero__text hero__text--3"}>
-                        some different<span className={"hero__span"}>text</span>{" "}
-                        about something.
+                        <span className={"hero__span"}>Bob</span> can build your
+                        next project.
                     </h2>
                 </div>
                 <div className="text-container text-container--4">
                     <h2 className={"hero__text hero__text--4"}>
-                        some different<span className={"hero__span"}>text</span>{" "}
-                        about something.
+                        See what <span className={"hero__span"}>Bob</span> can
+                        do for you.
                     </h2>
                 </div>
             </div>
