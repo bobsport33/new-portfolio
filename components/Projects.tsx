@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ProjectCont = styled.section`
     display: flex;
     flex-direction: column;
-    height: 5000px;
+    height: 4500px;
 
     @media ${media.tablet} {
         height: 3800px;
