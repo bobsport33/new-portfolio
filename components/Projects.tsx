@@ -56,7 +56,7 @@ interface Project {
     url: string;
     image: string;
     alt: string;
-    description: string;
+
     skills: string[];
 }
 

@@ -6,23 +6,20 @@ const data = {
             image: "/images/uretek screenshot.PNG",
             alt: "snapshot of Uretek's homepage",
             skills: ["NextJS", "Headless CMS", "React", "Postgres DB"],
-            description: "This project was build in NextJS and Strapi.",
         },
         {
             title: "Investors Associated",
             url: "https://investorsassociated.com/",
             image: "/images/IA screenshot.PNG",
             alt: "snapshot of Investors Associated homepage",
-            skills: ["Wordpress", "PHP", "Javascript", "SASS"],
-            description: "",
+            skills: ["Wordpress", "Javascript", "PHP", "SASS"],
         },
         {
             title: "Kelley Electric",
             url: "https://kelleyelectric.com/",
             image: "/images/kelley screenshot.PNG",
             alt: "snapshot of Kelley Electric homepage",
-            skills: ["Wordpress", "PHP", "Javascript", "SASS"],
-            description: "",
+            skills: ["Wordpress", "Javascript", "PHP", "SASS"],
         },
         {
             title: "IPHCA Landing Page",
@@ -30,26 +27,20 @@ const data = {
             image: "/images/IPHCA screenshot.PNG",
             alt: "snapshot of IPHCA Covid landing page",
             skills: ["Lottie", "GSAP", "Wordpress", "Javascript", "SASS"],
-            description:
-                "This landing page is for the IPHCA Covid Awareness Campaign. This heavily animated page uses AOS, GSAP, and Lottie to create a storybook like landing page.",
         },
         {
             title: "Oak Management",
             url: "https://www.oakmgtllc.com/",
             image: "/images/oak management screenshot.PNG",
             alt: "snapshot of oak management homepage",
-            skills: ["Wordpress", "PHP", "Javascript", "SASS"],
-            description:
-                "For this project, I was handed an existing website that needed pages addded and major changes to large parts of the site. I made adjustments on all but two pages of the site.",
+            skills: ["Wordpress", "Javascript", "PHP", "SASS"],
         },
         {
             title: "DCG Roofing",
             url: "https://dcgroofing.com/",
             image: "/images/DCG screen shot.PNG",
             alt: "snapshot of DCG Roofing homepage",
-            skills: ["Wordpress", "PHP", "Javascript", "SASS"],
-            description:
-                "A small and simple site built in PHP and Wordpress for a local client.",
+            skills: ["Wordpress", "Javascript", "PHP", "SASS"],
         },
     ],
     personalProjects: [
@@ -59,8 +50,6 @@ const data = {
             image: "/images/Pool Tracker.PNG",
             alt: "snapshot of a website that looks like a pool table",
             skills: ["NextJS", "React", "Firebase DB"],
-            description:
-                "At my work there is a pool table in the lounge that several people play on during lunch. We wanted to start keeping stats from the results of our game, so I created this NextJS app that is hosted on Netlify to be able to enter game results and track game data.",
         },
         {
             title: "Backyard Fantasy Football- React",
@@ -68,8 +57,6 @@ const data = {
             image: "/images/bff-react.PNG",
             alt: "snapshot of a website that looks like a football field",
             skills: ["React", "Custom Python API"],
-            description:
-                "This appliction uses a Python API that I wrote to generate individual players target share percentages. This project is a homepage that allows the user to look up player target share data by year or week.",
         },
         {
             title: "Backyard Fantasy Football- React Native",
@@ -77,17 +64,13 @@ const data = {
             image: "/images/bff_app.jpg",
             alt: "snapshot of a mobile app screen",
             skills: ["React Native", "Custom Python API"],
-            description:
-                "This application also uses the Python API I created. This is a mobile version of the application created in React Native.",
         },
         {
             title: "Target Share Generator",
             url: "https://github.com/bobsport33/target-share-generator",
-            image: "./img/image.png",
+            image: "/images/target-share-generator.PNG",
             alt: "snapshot of a github repo",
             skills: ["Python"],
-            description:
-                "This is a Python API I created that pulls data from a NFL play-by-play package, parses it, and calculates individual players target share percentage for a given season or week.",
         },
         {
             title: "Parralax Test",
@@ -95,8 +78,6 @@ const data = {
             image: "/images/parallax test.PNG",
             alt: "snapshot of a website with dog pictures",
             skills: ["React", "GSAP"],
-            description:
-                "This was a test project to become familiar with GSAP and its ScrollTrigger library. Scroll trigger is used to manipulate the position and rotation of background images in this project.",
         },
         {
             title: "GSAP Slides Test",
@@ -104,26 +85,13 @@ const data = {
             image: "/images/gsap slides test.PNG",
             alt: "snapshot of a website with horizontal slides",
             skills: ["React", "GSAP"],
-            description:
-                "This was a test project to become familar with horizontal scrolling and snapping with GSAP and ScrollTrigger.",
-        },
-        {
-            title: "Scroll Animation",
-            url: "https://glowing-dodol-8ffd85.netlify.app/",
-            image: "./img/image.png",
-            alt: "snapshot of a scrolling animation website",
-            skills: ["React", "GSAP"],
-            description:
-                "This test project inspired the hero design of this website. It is anotther example of using GSAP and ScrollTrigger. For this project, I also learned how to integrate GSAP into a React ecosystem.",
         },
         {
             title: "Mix-a_Six",
             url: "https://mix-a-six-ts.vercel.app/",
-            image: "./img/image.png",
+            image: "/images/mix-a-six.PNG",
             alt: "snapshot of a webpage",
             skills: ["NextJS", "TypeScript", "Postgres DB"],
-            description:
-                "I happen to be a homebrewer, and when I was thinking of test projects to make I decided to make a homepage for my personal brewery.",
         },
         {
             title: "Treat Reviews By Benny",
@@ -131,8 +99,6 @@ const data = {
             image: "/images/treat review by benny.PNG",
             alt: "snapshot of a blog webpage",
             skills: ["NextJS", "React"],
-            description:
-                "This project was one of my first working with NextJS. This practice project is a blog that uses NextJS routing and rendering techniques.",
         },
     ],
     skills: [

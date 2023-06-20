@@ -2,7 +2,7 @@ import Head from "next/head";
 import data from "./api/data";
 
 import Header from "../components/Header";
-import Hero from "../components/Hero";
+// import Hero from "../components/Hero";
 import ScrollText from "../components/ScollText";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
@@ -38,7 +38,7 @@ export default function Home() {
             </Head>
             <main>
                 <Header />
-                <Hero />
+                {/* <Hero /> */}
                 <ScrollText />
                 <Projects projects={data.projects} />
                 <PersonalProjects projects={data.personalProjects} />

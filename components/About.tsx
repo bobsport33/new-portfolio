@@ -59,11 +59,7 @@ const AboutCont = styled.section`
 const About = () => {
     return (
         <AboutCont id="about">
-            <img
-                src="https://picsum.photos/400/300"
-                alt=""
-                className="about__img"
-            />
+            <img src="/images/Bob.jpg" alt="" className="about__img" />
             <div className="about__container">
                 <h3 className="about__heading">About</h3>
                 <p className="about__description">

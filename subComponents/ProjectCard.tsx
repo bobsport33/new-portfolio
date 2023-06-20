@@ -78,7 +78,6 @@ interface Data {
         image: string;
         alt: string;
         skills: string[];
-        description: string;
     };
 }
 
