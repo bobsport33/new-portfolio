@@ -34,7 +34,7 @@ const AboutCont = styled.section`
 
     .about__img {
         height: fit-content;
-        aspect-ratio: 4/3;
+
         width: 400px;
 
         @media ${media.tablet} {

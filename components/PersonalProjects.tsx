@@ -13,7 +13,7 @@ const PersonalProjectCont = styled.section`
     height: 5800px;
 
     @media ${media.tablet} {
-        height: 4500px;
+        height: 4300px;
     }
 
     @media ${media.mobile} {
