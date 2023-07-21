@@ -14,7 +14,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>scroll animation</title>
+                <title>Bob The Dev</title>
                 <meta
                     name="description"
                     content="Personal Portfolio for Bob Kelly"
@@ -24,7 +24,7 @@ export default function Home() {
                     content="width=device-width, initial-scale=1"
                 />
 
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/icons8-backend-development-32.png" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link
                     rel="preconnect"
