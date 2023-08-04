@@ -8,6 +8,14 @@ const data = {
         //     skills: ["NextJS", "Headless CMS", "React", "Postgres DB"],
         // },
         {
+            title: "Beggars Pizza",
+            url: "https://www.beggarspizza.com/",
+            image: "/images/beggars screenshot.png",
+            alt: "snapshot of Beggards Pizza homepage",
+            skills: ["NextJS", "Headless CMS", "React", "Postgres DB"],
+        },
+
+        {
             title: "Investors Associated",
             url: "https://investorsassociated.com/",
             image: "/images/IA screenshot.PNG",
@@ -33,13 +41,6 @@ const data = {
             url: "https://www.oakmgtllc.com/",
             image: "/images/oak management screenshot.PNG",
             alt: "snapshot of oak management homepage",
-            skills: ["Wordpress", "Javascript", "PHP", "SASS"],
-        },
-        {
-            title: "DCG Roofing",
-            url: "https://dcgroofing.com/",
-            image: "/images/DCG screen shot.PNG",
-            alt: "snapshot of DCG Roofing homepage",
             skills: ["Wordpress", "Javascript", "PHP", "SASS"],
         },
     ],
