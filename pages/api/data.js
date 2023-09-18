@@ -1,12 +1,12 @@
 const data = {
     projects: [
-        // {
-        //     title: "Uretek",
-        //     url: "http://wwww.uretekusa.com",
-        //     image: "/images/uretek screenshot.PNG",
-        //     alt: "snapshot of Uretek's homepage",
-        //     skills: ["NextJS", "Headless CMS", "React", "Postgres DB"],
-        // },
+        {
+            title: "Uretek",
+            url: "http://wwww.uretekusa.com",
+            image: "/images/uretek screenshot.PNG",
+            alt: "snapshot of Uretek's homepage",
+            skills: ["NextJS", "Headless CMS", "React", "Postgres DB"],
+        },
         {
             title: "Beggars Pizza",
             url: "https://www.beggarspizza.com/",
