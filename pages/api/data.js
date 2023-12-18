@@ -81,11 +81,11 @@ const data = {
             skills: ["React", "GSAP"],
         },
         {
-            title: "GSAP Slides Test",
-            url: "https://bobsport33.github.io/GSAP-Test/",
-            image: "/images/gsap slides test.PNG",
+            title: "Renovation Estimator",
+            url: "https://renovation-estimator.netlify.app/",
+            image: "/images/reno_img.PNG",
             alt: "snapshot of a website with horizontal slides",
-            skills: ["React", "GSAP"],
+            skills: ["React", "NextJs", "NextAuth"],
         },
         {
             title: "Mix-a_Six",
